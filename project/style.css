@@ -33,7 +33,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 90vh;
+  min-height: 100vh;
 }
 
 .form-box {
@@ -95,10 +95,11 @@ input::placeholder {
 .button {
   display: flex;
   justify-content: center;
+  
 }
 .btn {
-  color: var(--text-color);
-  background-color: var(--bg-color);
+  color: var(--main-color);
+  background-color: #000000;
   width: 50%;
   height: 35px;
   border-radius: 5px;
@@ -108,10 +109,10 @@ input::placeholder {
   cursor: pointer;
   box-shadow: 3px 0 10px rgba(0, 0, 0, 0.5);
 }
-/* .btn:hover{
-    background-color: var(--text-color);
-    transition: 2s;
-} */
+.btn:hover{
+    background-color: rgb(97, 95, 95);
+    transition: 1s;
+}
 
 .group {
   display: flex;
@@ -121,9 +122,10 @@ input::placeholder {
   margin-top: 10px;
   display: flex;
   justify-content: center;
+  color: var(--main-color);
 }
 .group span a {
-  color: var(--text-color);
+  color: var(--main-color);
   position: relative;
   margin-top: 10px;
   text-decoration: none;

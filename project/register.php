@@ -13,7 +13,7 @@
 
     <div class="container">
         <div class="form-box">
-            <form action="" name="Formfill" onsubmit="return validation">
+            <form action="" name="Formfill">
 
                 <div class="top">
                     <div>
@@ -29,10 +29,10 @@
 
                 <div class="firstinput">
                     <div>
-                        <input type="text" class="name-box" name="fname" placeholder="First Name">
+                        <input type="text" class="name-box" name="fname" placeholder="First Name" required>
                     </div>
                     <div>
-                        <input type="text" class="name-box" name="lname" placeholder="Last Name">
+                        <input type="text" class="name-box" name="lname" placeholder="Last Name" required>
                     </div>
                 </div
 
@@ -41,24 +41,25 @@
                 <!-- ----------------------------------------------------------------------- -->
                 <div class="input-box">
                 <i class='bx bxs-envelope'></i>
-                    <input type="email" name="email" placeholder="Enter your email">
+            <form action="login.php" autocomplete="on" name="Formfill">
+                    <input type="email" autocomplete="on"  name="email" placeholder="Enter your email" required>
                 </div>
                 <div class="input-box">
                 <i class='bx bx-lock'></i>
-                    <input type="password" name="password" placeholder="Enter your password">
+                    <input type="password" name="password" placeholder="Enter your password" required>
                 </div>
                 <div class="input-box">
                 <i class='bx bx-lock'></i>
-                    <input type="password" name="cPassword" placeholder="Confirm Your password">
+                    <input type="password" name="cPassword" placeholder="Confirm Your password" required>
                 </div>
                 <div class="input-box">
                 <i class='bx bx-phone'></i>
-                    <input type="text" name="phonenumber" placeholder="Enter your number">
+                    <input type="text" name="phonenumber" placeholder="Enter your number" required>
                     
                 </div>
                 <div class="input-box">
                 <i class='bx bxs-location-plus'></i>
-                    <input type="text" name="address" placeholder="Enter your address">
+                    <input type="text" autocomplete="off" name="address" placeholder="Enter your address" required>
                 </div>
 
                 <div class="button">
@@ -71,7 +72,6 @@
         </div>
     </div>
 
-<script src="script.js"></script>
 </body>
 
 </html>
