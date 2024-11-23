@@ -13,7 +13,7 @@
 
     <div class="container">
         <div class="form-box">
-            <form action="" name="Formfill">
+            <form action="" name="Formfill" onsubmit="return validation">
 
                 <div class="top">
                     <div>
@@ -25,13 +25,14 @@
                 </div>
                 <!-- ------------------------- -->
 
+                <p id="result"></p>
 
                 <div class="firstinput">
                     <div>
-                        <input type="text" class="name-box" placeholder="First Name">
+                        <input type="text" class="name-box" name="fname" placeholder="First Name">
                     </div>
                     <div>
-                        <input type="text" class="name-box" placeholder="Last Name">
+                        <input type="text" class="name-box" name="lname" placeholder="Last Name">
                     </div>
                 </div
 

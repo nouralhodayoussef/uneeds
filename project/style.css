@@ -140,3 +140,10 @@ i {
 
   right: 0;
 }
+
+#result{
+  color: red;
+  font-weight: 500;
+  top: 25px;
+  
+}
