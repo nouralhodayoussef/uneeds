@@ -22,7 +22,7 @@
 }
 
 body {
-  background-image: url(imgs/bg.jpg);
+  background-image: url(imgs/tst2.jpg);
   background-position: center;
   background-size: cover;
   height: 110vh;
@@ -41,18 +41,22 @@ body {
   justify-content: center;
   position: relative;
   width: 400px;
-  height: 490px;
+  height: 500px;
+
+  box-shadow: 3px 0 10px rgba(0, 0, 0, 0.5);
 
   border: 1px solid rgba(255, 255, 255.5);
 
   border-radius: 20px;
-  backdrop-filter: blur(9px);
+  /* background-color: rgb(255, 248, 215); */
+  backdrop-filter: blur(10px);
   margin-top: 65px;
 }
 
 .form-box h2 {
   color: var(--text-color);
   text-align: center;
+  padding-top: 8px;
   font-size: 32px;
 }
 
@@ -108,10 +112,11 @@ input::placeholder {
   cursor: pointer;
   box-shadow: 3px 0 10px rgba(0, 0, 0, 0.5);
 }
-/* .btn:hover{
+.btn:hover{
     background-color: var(--text-color);
-    transition: 2s;
-} */
+    transition: 10;
+    color: #ffffff;
+}
 
 .group {
   display: flex;
