@@ -13,7 +13,9 @@
 
 .top {
   display: flex;
-  justify-content: center;
+  flex-direction: column; /* Stack items vertically */
+  align-items: center;    /* Center items horizontally */
+  justify-content: center; /* Center items vertically */
 }
 
 .icon {
@@ -25,6 +27,8 @@ body {
   background-image: url(imgs/tst2.jpg);
   background-position: center;
   background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
   height: 110vh;
   width: 100%;
 }
@@ -36,12 +40,17 @@ body {
   min-height: 100vh;
 }
 
+#login-form{
+  height: 400px; /* Shrink height to 300px */
+
+}
+
 .form-box {
   display: flex;
   justify-content: center;
   position: relative;
   width: 400px;
-  height: 500px;
+  height: 580px;
 
   box-shadow: 3px 0 10px rgba(0, 0, 0, 0.5);
 
@@ -53,11 +62,13 @@ body {
   margin-top: 65px;
 }
 
+
 .form-box h2 {
   color: var(--text-color);
   text-align: center;
-  padding-top: 8px;
   font-size: 32px;
+  margin-top: -20px;
+  
 }
 
 .firstinput {
@@ -114,7 +125,7 @@ input::placeholder {
   box-shadow: 3px 0 10px rgba(0, 0, 0, 0.5);
 }
 .btn:hover{
-    background-color: var(--text-color);
+    background-color: var(--bg-color);
     transition: 10;
     color: #ffffff;
 }
@@ -122,18 +133,19 @@ input::placeholder {
 .group {
   display: flex;
   justify-content: space-between;
+  color: black;
 }
 .group {
   margin-top: 10px;
   display: flex;
   justify-content: center;
-  color: var(--main-color);
+  color: black;
 }
 .group span a {
-  color: var(--main-color);
+  color: black;
   position: relative;
   margin-top: 10px;
-  text-decoration: none;
+  text-decoration: underline;
   font-weight: 500;
 }
 
@@ -152,5 +164,6 @@ i {
   color: red;
   font-weight: 500;
   top: 25px;
-  
+
 }
+
