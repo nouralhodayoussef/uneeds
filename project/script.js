@@ -1,13 +1,8 @@
 document.addEventListener("DOMContentLoaded", () => {
-    const menuIcon = document.getElementById("menu-icon");
+    const menuIcon = document.getElementById("menu-cart");
     const navbar = document.getElementById("navbar");
+    menuIcon.addEventListener("click", () => {
+      navbar.classList.toggle("active");
+    });
   
-    if (menuIcon && navbar) {
-      menuIcon.addEventListener("click", () => {
-        navbar.classList.toggle("active");
-        console.log("Menu toggled");
-      });
-    } else {
-      console.error("Menu icon or navbar not found");
-    }
   });
