@@ -59,10 +59,11 @@ img {
 }
 .navbar {
   display: flex;
-  gap: 10px;
+  gap: 20px;
 }
 .navbar li {
   list-style: none;
+  gap: 10px;
 }
 .navbar  li a {
   text-decoration: none;

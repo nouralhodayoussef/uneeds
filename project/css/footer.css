@@ -19,7 +19,7 @@ body
 }
 #containerFooter h3:hover, #containerFooter p:hover
 {
-    color: lightslategray;
+    color: gold;
     cursor: pointer;
 }
 #webFooter
@@ -48,7 +48,7 @@ body
 #credit a::after
 {
 content: "";
-background: white;
+background: gold;
 mix-blend-mode: exclusion;
 width: calc(100% + 18px);
 height: 0;

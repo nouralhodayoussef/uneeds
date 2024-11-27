@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="icon" href="imgs/logo.png" type="image/png" sizes="16x16">
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="productDetails.css" />
+    
+  </head>
+  <body>
+   
+    <div id="header"></div>
+ 
+    <script>
+     document.addEventListener("DOMContentLoaded", () => {
+ fetch('finalheader.html')
+   .then(response => response.text())
+   .then(data => {
+     document.getElementById('header').innerHTML = data;
+     const menuToggle = document.querySelector('.menu-cart');
+     const navbar = document.querySelector('.navbar');
+     if (menuToggle && navbar) {
+       menuToggle.addEventListener('click', () => {
+         navbar.classList.toggle('active');
+       });
+     }
+   })
+   .catch(error => {
+     console.error('Error loading header: ', error);
+   });
+});
+    </script>
+    <!----------------------------------  -->
+
+    
+    <div id="containerD">
+        <!-- Image Section -->
+        <div id="imageSection">
+          <img id="imgDetails" src="imgs/planners/plan1.jpeg" alt="Product Image" />
+        </div>
+  
+        <!-- Product Details -->
+        <div id="productDetails">
+          <h1>Daily Planner</h1>
+          <h4>Planners</h4>
+          <div id="details">
+            <h3>Price: 15$</h3>
+            <h3>Description</h3>
+            <p>
+              This is a sample description of the product. It provides details about the product's features and specifications.
+            </p>
+          </div>
+  
+          <!-- Product Preview -->
+          <div id="productPreview">
+            <h3>Product Preview</h3>
+            <img src="imgs/planners/plan1.jpeg" alt="Preview 1" onclick="changeImage('imgs/planners/plan1.jpeg')" />
+            <img src="imgs/planners/plan3.jpeg" alt="Preview 2" onclick="changeImage('imgs/planners/plan3.jpeg')" />
+            <img src="imgs/planners/plan3.jpeg" alt="Preview 3" onclick="changeImage('imgs/planners/plan3.jpeg')" />
+          </div>
+  
+          <!-- Add to Cart Button -->
+          <div id="button">
+            <button onclick="addToCart()">Add to Cart</button>
+          </div>
+          <script>
+            // Change the main image when a preview image is clicked
+            function changeImage(src) {
+              document.getElementById("imgDetails").src = src;
+            }
+      
+            // Handle Add to Cart
+            function addToCart() {
+              alert("Product added to cart!");
+            }
+          </script>
+        </div>
+      </div>
+      
+
+
+        <!-- ------------Footer------------------- -->
+
+      <div id="footer"></div>
+
+      <script>
+        fetch('footer.html')
+        .then(response => response.text())
+        .then(data => document.getElementById('footer').innerHTML =data)
+        .catch(error => console.error('Error loading footer: ',error));
+      </script>
+  <script src="script.js"></script>
+  </body>
+
+</html>
