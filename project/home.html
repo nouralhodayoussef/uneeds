@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="home.css" />
+  </head>
+  <body>
+    <!-- Header -->
+     <div id="header"></div>
+     <script src="script.js"></script>
+    <script>
+      fetch('mainheader.html')
+      .then(response => response.text())
+      .then(data => document.getElementById('header').innerHTML =data)
+      .catch(error => console.error('Error loading header: ',error));
+    </script>
+    <!----------------------------------  -->
+
+    <div class="container">
+       
+        <div class="statement">
+            <h1>WE COVER <span>ALL YOUR </span>UNEEDS</h1>
+        </div>
+        <div><p>Your one-stop-shop for all university needs</p></div>
+        <div><button type="button">Shop Now</button></div>
+    </div>
+    <!-- ------------------- -->
+
+      <div id="footer"></div>
+
+      <script src="script.js"></script>
+      <script>
+        fetch('footer.html')
+        .then(response => response.text())
+        .then(data => document.getElementById('footer').innerHTML =data)
+        .catch(error => console.error('Error loading footer: ',error));
+      </script>
+  </body>
+</html>
