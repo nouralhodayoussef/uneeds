@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <link rel="icon" href="imgs/logo.png" type="image/png" sizes="16x16">
     <link
       href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
       rel="stylesheet"
@@ -20,6 +21,7 @@
       .then(data => document.getElementById('header').innerHTML =data)
       .catch(error => console.error('Error loading header: ',error));
     </script>
+
     <!----------------------------------  -->
 
     <div class="container">
@@ -29,17 +31,24 @@
         </div>
         <div><p>Your one-stop-shop for all university needs</p></div>
         <div><button type="button">Shop Now</button></div>
+        <img src="imgs/3.png" alt="">
     </div>
-    <!-- ------------------- -->
+    <!-- ------------Products------------------- -->
+
+    
+
+
+        <!-- ------------Footer------------------- -->
 
       <div id="footer"></div>
 
-      <script src="script.js"></script>
       <script>
         fetch('footer.html')
         .then(response => response.text())
         .then(data => document.getElementById('footer').innerHTML =data)
         .catch(error => console.error('Error loading footer: ',error));
       </script>
+
   </body>
+
 </html>
