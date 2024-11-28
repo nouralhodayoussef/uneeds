@@ -223,7 +223,7 @@ a {
   }
   #box {
       flex: 0 0 33%; /* 3 items per row */
-     
+     padding-bottom: 15px;
   }
   
 }
