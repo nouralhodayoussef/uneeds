@@ -2,6 +2,7 @@
   --main-color: #ffffff;
   --text-color: #000000;
   --bg-color: #7d7b7b;
+  --font-family: "Lato", sans-serif;
 
 }
 
@@ -32,6 +33,7 @@ body {
   justify-content: center;
   align-items: center;
   min-height: 100vh;
+  font-family: var(--font-family);
 }
 
 #login-form{
@@ -84,8 +86,12 @@ body {
   position: relative;
   margin: 30px 0;
   width: 310px;
-
+  font-family: var(--font-family);
   border-bottom: 2px solid var(--main-color);
+}
+
+#signin{
+  text-decoration: none;
 }
 
 .form-box .input-box input {

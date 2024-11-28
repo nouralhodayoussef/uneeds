@@ -9,7 +9,7 @@
       href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="home.css" />
+    <link rel="stylesheet" href="css/cart.css" />
     
   </head>
   <body>
@@ -37,22 +37,41 @@
     </script>
     <!----------------------------------  -->
 
-    <div class="container">
-       
-        <div class="statement">
-            <h1>WE COVER <span>ALL YOUR </span>UNEEDS</h1>
-        </div>
-        <div><p>Your one-stop-shop for all university needs</p></div>
-        <div><button type="button">Shop Now</button></div>
-        <img src="imgs/3.png" alt="">
-    </div>
-
-    <div class="yellowDiv">
-      
-    </div>
-    <!-- ------------Products------------------- -->
-
     
+    <div id="cartMainContainer">
+        <h1>Checkout</h1>
+        <h3 id="totalItem">Total Items: 2</h3>
+
+        <div id="cartContainer">
+            <!-- Static Cart Items -->
+            <div id="boxContainer">
+                <div id="box">
+                    <img src="imgs/stationary/notebook.1jpeg.webp" alt="Item 1 Image">
+                    <h3>Leather Notebook</h3>
+                    <h4>Amount: <span>12$</span></h4>
+                </div>
+                <div id="box">
+                    <img src="imgs/tumblers/tum3.jpeg" alt="Item 2 Image">
+                    <h3>Stitch Tumbler</h3>
+                    <h4>Amount: <span>15$</span></h4>
+                </div>
+            </div>
+
+            <!-- Total Section -->
+            <div id="totalContainer">
+                <div id="total">
+                    <h2>Total Amount</h2>
+                    <h4>Amount: <span>27$</span></h4>
+                    <div id="button">
+                        <button>
+                            <a href="orderPlaced.html">Place Order</a>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
 
 
         <!-- ------------Footer------------------- -->
