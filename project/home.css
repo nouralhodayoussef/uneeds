@@ -292,6 +292,7 @@ a {
   line-height: 1.6;
   text-align: center;
   margin-bottom: 30px;
+  text-align: justify;
 }
 
 .feedback-form {
