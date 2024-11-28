@@ -56,7 +56,7 @@ img {
   justify-content: space-between;
   gap: 30px;
   position: absolute;
-  left: 35%;
+  left: 32%;
 }
 .navbar {
   display: flex;
@@ -104,17 +104,19 @@ a.btn {
   .navbar ul {
     margin-left: -50px;
   }
+ 
 }
 
-@media (max-width: 768px) {
+@media (max-width: 841px) {
   .menu-icon {
     display: initial;
     color: var(--text-color);
     position: absolute;
     display: block;
     right: 0;
+    padding-right: 10px;
   }
-
+  
 
   .navbar {
     position: absolute;
@@ -131,7 +133,8 @@ a.btn {
     padding-left: 0px;
     z-index: 1;
   }
-
+ 
+ 
   .navbar li {
     padding: 10px;
   }
@@ -145,13 +148,41 @@ a.btn {
   }
   .shop-cart {
     margin-right: 35px;
+   
   }
 
   .navbar a {
     display: block;
   }
   
-  /* header {
-    padding: 10px 20px;
-  } */
+  header {
+    padding-left: 10px;
+  }
+}
+
+@media (max-width: 400px){
+  img{
+    width: 40px;
+    height: 40px;
+  }
+  h2{
+    font-size: 1rem;
+  }
+  .menu-icon{
+    font-size: 1.2rem;
+  }
+  .shop-cart{
+    font-size: 1.2rem;
+  }
+  header{
+    padding-left: 15px;
+    padding-right: 50px;
+  }
+  
+}
+
+@media(max-width: 272px){
+  .shop-cart{
+    margin-left: 40%;
+  }
 }
