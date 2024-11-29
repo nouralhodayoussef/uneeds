@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Uneeds Admin</title>
+        <link rel="icon" href="imgs/logo.png" type="image/png" sizes="16x16">
+        <link
+          href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+          rel="stylesheet"
+        />
+        <link rel="stylesheet" href="css/admin.css" />
+        
+      </head>
+<body>
+    <div class="sidebar">
+        <h2><span>Uneed's</span> Admin Panel</h2>
+        <ul>
+            <li id="products-tab" class="active">Products</li>
+            <li id="orders-tab">Orders</li>
+            <li id="feedback-tab">Feedback</li>
+        </ul>
+    </div>
+
+    <div class="content">
+        <!-- Products Section -->
+        <div id="products-section" class="section active">
+            <h2>Products</h2>
+            <button onclick="showCreateForm()">Add Product</button>
+            <table id="products-table">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Name</th>
+                        <th>Price</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                </tbody>
+            </table>
+
+            <div id="product-form" class="form" style="display: none;">
+                <h3 id="form-title">Add Product</h3>
+                <label for="product-id">ID:</label>
+                <input type="text" id="product-id" placeholder="Product ID" readonly>
+                <label for="product-name">Name:</label>
+                <input type="text" id="product-name" placeholder="Product Name">
+                <label for="product-price">Price:</label>
+                <input type="text" id="product-price" placeholder="Product Price">
+                <button onclick="saveProduct()">Save</button>
+            </div>
+        </div>
+
+        <!-- Orders Section -->
+        <div id="orders-section" class="section">
+            <h2>Orders</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Order ID</th>
+                        <th>Customer</th>
+                        <th>Product</th>
+                        <th>Total Price</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>101</td>
+                        <td>Nada Taleb</td>
+                        <td>Tumbler, Notebook</td>
+                        <td>25$</td>
+                        <td>Delivered</td>
+                    </tr>
+                    <tr>
+                        <td>102</td>
+                        <td>Tony </td>
+                        <td>Laptop Bag</td>
+                        <td>15$</td>
+                        <td>Pending</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Feedback Section -->
+        <div id="feedback-section" class="section">
+            <h2>Feedback</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Feedback ID</th>
+                        <th>Customer</th>
+                        <th>Message</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>201</td>
+                        <td>Tony</td>
+                        <td>Great products! The best place to cover all my university needs.</td>
+                    </tr>
+                    <tr>
+                        <td>202</td>
+                        <td>Jana Masri</td>
+                        <td>Amazing products and service.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <script>
+        // Navigation
+        const tabs = document.querySelectorAll('.sidebar ul li');
+        const sections = document.querySelectorAll('.section');
+        tabs.forEach((tab, index) => {
+            tab.addEventListener('click', () => {
+                tabs.forEach(t => t.classList.remove('active'));
+                sections.forEach(s => s.classList.remove('active'));
+                tab.classList.add('active');
+                sections[index].classList.add('active');
+            });
+        });
+
+        // Product Management
+        let products = [
+            { id: 1, name: 'Planner', price: '$12' },
+            { id: 2, name: 'Tumbler', price: '$20' }
+        ];
+        let isEditing = false;
+        let editingIndex = null;
+
+        function renderProducts() {
+            const tbody = document.querySelector('#products-table tbody');
+            tbody.innerHTML = '';
+            products.forEach((product, index) => {
+                tbody.innerHTML += `
+                    <tr>
+                        <td>${product.id}</td>
+                        <td>${product.name}</td>
+                        <td>${product.price}</td>
+                        <td>
+                            <button onclick="editProduct(${index})">Edit</button>
+                            <button onclick="deleteProduct(${index})">Delete</button>
+                        </td>
+                    </tr>
+                `;
+            });
+        }
+
+        function showCreateForm() {
+            isEditing = false;
+            document.getElementById('form-title').innerText = 'Add Product';
+            document.getElementById('product-id').value = products.length + 1;
+            document.getElementById('product-name').value = '';
+            document.getElementById('product-price').value = '';
+            document.getElementById('product-form').style.display = 'block';
+        }
+
+        function editProduct(index) {
+            isEditing = true;
+            editingIndex = index;
+            const product = products[index];
+            document.getElementById('form-title').innerText = 'Edit Product';
+            document.getElementById('product-id').value = product.id;
+            document.getElementById('product-name').value = product.name;
+            document.getElementById('product-price').value = product.price;
+            document.getElementById('product-form').style.display = 'block';
+        }
+
+        function saveProduct() {
+            const id = document.getElementById('product-id').value;
+            const name = document.getElementById('product-name').value;
+            const price = document.getElementById('product-price').value;
+
+            if (isEditing) {
+                products[editingIndex] = { id, name, price };
+            } else {
+                products.push({ id, name, price });
+            }
+
+            document.getElementById('product-form').style.display = 'none';
+            renderProducts();
+        }
+
+        function deleteProduct(index) {
+            products.splice(index, 1);
+            renderProducts();
+        }
+
+        renderProducts();
+    </script>
+</body>
+</html>
