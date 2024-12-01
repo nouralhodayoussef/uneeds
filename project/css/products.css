@@ -140,3 +140,17 @@ h4
         grid-template-columns: repeat(2, 1fr);
     }
 }
+@media(max-width: 425px){
+
+    #containerProduct{
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+/* #box{
+  
+    display: grid;
+} */
+/* #box img{
+    padding-top: -10px;
+} */
+}
