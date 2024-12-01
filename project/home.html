@@ -1,149 +1,149 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Uneeds</title>
-    <link rel="icon" href="imgs/logo.png" type="image/png" sizes="16x16">
-    <link
-      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="home.css" />
-    
-  </head>
-  <body>
-   
-    <div id="header"></div>
- 
-    <script>
-     document.addEventListener("DOMContentLoaded", () => {
- fetch('finalheader.html')
-   .then(response => response.text())
-   .then(data => {
-     document.getElementById('header').innerHTML = data;
-     const menuToggle = document.querySelector('.menu-icon');
-     const navbar = document.querySelector('.navbar');
-     if (menuToggle && navbar) {
-       menuToggle.addEventListener('click', () => {
-         navbar.classList.toggle('active');
-       });
-     }
-   })
-   .catch(error => {
-     console.error('Error loading header: ', error);
-   });
-});
-    </script>
-    <!----------------------------------  -->
 
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Uneeds</title>
+  <link rel="icon" href="imgs/logo.png" type="image/png" sizes="16x16">
+  <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="home.css" />
 
-    
+</head>
 
-    <div class="container">
-       
-        <div class="statement">
-            <h1>WE COVER <span>ALL YOUR </span>UNEEDS</h1>
-        </div>
-        <div><p>Your one-stop-shop for all university needs</p></div>
-        <!-- <div><button type="button">Shop Now</button></div> -->
-         <a class="button" href="products.html">Show Now</a>
-        <img src="imgs/3.png" alt="">
-    </div>
+<body>
 
-    <div class="yellowDiv">
-      
-    </div>
-    <!-- ------------Products------------------- -->
-<!-- Slider -->
-<div class="sliderdiv">
-  <div class="slider">
-    <button class="slider-btn prev"><i class="bx bx-left-arrow-alt"></i></button>
-    <div id="containerProduct" class="slider-track">
-      <div id="box">
-        
-        <a href="productDetails.html">
-          <img src="imgs/mugs/mug4.jpeg" alt="Notebook A4" />
-          <div id="details">
-            <h3>Pink Mug</h3>
-            <h4>Mugs</h4>
-            
-          </div>
-        </a>
-      </div>
-      <div id="box">
-        <a href="productDetails.html">
-          <img src="imgs/planners/plan3.jpeg" alt="Gel Pen - Blue" />
-          <div id="details">
-            <h3>Daily Planner</h3>
-            <h4>Planners</h4>
-            
-          </div>
-        </a>
-      </div>
-      <div id="box">
-        <a href="productDetails.html">
-          <img src="imgs/stationary/notebook.1jpeg.webp" alt="Leather Bound Journal" />
-          <div id="details">
-            <h3>Leather Journal</h3>
-            <h4>Stationery</h4>
-            
-          </div>
-        </a>
-      </div>
-      <div id="box">
-        <a href="productDetails.html">
-          <img src="imgs/tumblers/tumb1.jpeg" alt="" />
-          <div id="details">
-            <h3>Stitch Tumbler</h3>
-            <h4>Tumblers</h4>
-            
-          </div>
-        </a>
-      </div>
-     
-    </div>
-    <button class="slider-btn next"><i class="bx bx-right-arrow-alt"></i></button>
-  </div>
-</div>
+  <div id="header"></div>
 
-
-
-
-<!-- ---------------- -->
- <!-- About us -->
- <div class="about-us">
-  <div class="about-content">
-    <h2>About Us</h2>
-    <p>At <strong>Uneeds</strong>, we provide high-quality products at affordable prices, ensuring a seamless shopping experience. From home essentials to lifestyle accessories, we’re here to meet all your needs with fast shipping and excellent customer service.</p>
-    <form class="feedback-form">
-      <h3>Send us your feedback</h3>
-      <input
-        type="text"
-        placeholder="Your feedback here..."
-        class="feedback-input"
-        required
-      />
-      <button type="submit" class="submit-btn">Submit</button>
-    </form>
-  </div>
-  
-</div>
- 
-
-
-        <!-- ------------Footer------------------- -->
-
-      <div id="footer"></div>
-
-      <script>
-        fetch('footer.html')
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      fetch('finalheader.html')
         .then(response => response.text())
-        .then(data => document.getElementById('footer').innerHTML =data)
-        .catch(error => console.error('Error loading footer: ',error));
-      </script>
-<script src="script.js"></script>
-<script src="slider.js"></script>
-  </body>
+        .then(data => {
+          document.getElementById('header').innerHTML = data;
+          const menuToggle = document.querySelector('.menu-icon');
+          const navbar = document.querySelector('.navbar');
+          if (menuToggle && navbar) {
+            menuToggle.addEventListener('click', () => {
+              navbar.classList.toggle('active');
+            });
+          }
+        })
+        .catch(error => {
+          console.error('Error loading header: ', error);
+        });
+    });
+  </script>
+  <!----------------------------------  -->
+
+
+
+
+  <div class="container">
+
+    <div class="statement">
+      <h1>WE COVER <span>ALL YOUR </span>UNEEDS</h1>
+    </div>
+    <div>
+      <p>Your one-stop-shop for all university needs</p>
+    </div>
+    <!-- <div><button type="button">Shop Now</button></div> -->
+    <a class="button" href="products.html">Show Now</a>
+    <img src="imgs/3.png" alt="">
+  </div>
+
+  <div class="yellowDiv">
+
+  </div>
+  <!-- ------------Products------------------- -->
+  <!-- Slider -->
+  <div class="sliderdiv">
+    <div class="slider">
+      <button class="slider-btn prev"><i class="bx bx-left-arrow-alt"></i></button>
+      <div id="containerProduct" class="slider-track">
+        <div id="box">
+
+          <a href="productDetails.html">
+            <img src="imgs/mugs/mug4.jpeg" alt="Notebook A4" />
+            <div id="details">
+              <h3>Pink Mug</h3>
+              <h4>Mugs</h4>
+
+            </div>
+          </a>
+        </div>
+        <div id="box">
+          <a href="productDetails.html">
+            <img src="imgs/planners/plan3.jpeg" alt="Gel Pen - Blue" />
+            <div id="details">
+              <h3>Daily Planner</h3>
+              <h4>Planners</h4>
+
+            </div>
+          </a>
+        </div>
+        <div id="box">
+          <a href="productDetails.html">
+            <img src="imgs/stationary/notebook.1jpeg.webp" alt="Leather Bound Journal" />
+            <div id="details">
+              <h3>Leather Journal</h3>
+              <h4>Stationery</h4>
+
+            </div>
+          </a>
+        </div>
+        <div id="box">
+          <a href="productDetails.html">
+            <img src="imgs/tumblers/tumb1.jpeg" alt="" />
+            <div id="details">
+              <h3>Stitch Tumbler</h3>
+              <h4>Tumblers</h4>
+
+            </div>
+          </a>
+        </div>
+
+      </div>
+      <button class="slider-btn next"><i class="bx bx-right-arrow-alt"></i></button>
+    </div>
+  </div>
+
+
+
+
+  <!-- ---------------- -->
+  <!-- About us -->
+  <section id="about-us">
+    <div class="about-us">
+      <div class="about-content">
+        <h2>About Us</h2>
+        <p>At <strong>Uneeds</strong>, we provide high-quality products at affordable prices, ensuring a seamless
+          shopping experience. From home essentials to lifestyle accessories, we’re here to meet all your needs with
+          fast shipping and excellent customer service.</p>
+        <form class="feedback-form">
+          <h3>Send us your feedback</h3>
+          <input type="text" placeholder="Your feedback here..." class="feedback-input" required />
+          <button type="submit" class="submit-btn">Submit</button>
+        </form>
+      </div>
+
+    </div>
+  </section>
+
+
+
+  <!-- ------------Footer------------------- -->
+
+  <div id="footer"></div>
+
+  <script>
+    fetch('footer.html')
+      .then(response => response.text())
+      .then(data => document.getElementById('footer').innerHTML = data)
+      .catch(error => console.error('Error loading footer: ', error));
+  </script>
+  <script src="script.js"></script>
+  <script src="slider.js"></script>
+</body>
 
 </html>
