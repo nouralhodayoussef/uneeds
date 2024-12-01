@@ -17,23 +17,25 @@ body {
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
+  
   height: 70vh;
   width: 76%;
   margin-left: 12%;
   border-radius: 20px;
   margin-bottom: 30px;
 }
-.statement {
+.statement h1 {
   font-family: var(--font-family);
   font-weight: 600;
+
   padding-top: 20px;
 padding-left: 40px;
   width: 20%;
   margin-top: 50px;
-  font-size: 20px;
+  font-size: 2.5rem;
 }
 
-.statement span {
+span {
   background-color: var(--span-color);
   border-style: outset;
 }
@@ -42,6 +44,7 @@ padding-left: 40px;
   margin-left: 45px;
   margin-bottom: 40px;
   font-family: var(--font-family);
+  text-align: justify;
 
 }
 a.button {
@@ -78,14 +81,26 @@ a.button {
   }
 }
 @media (max-width: 1150px) {
+  
   .container img {
-    display: none;
+  
+    position: absolute;
+    top: 32%;
+    right: 10%;
+    
+    width: 500px;
+    height: 400px;
   }
+  
 }
 
 @media (max-width: 1030px) {
   .statement {
+
     width:30%;
+  }
+  .container img{
+    display: none;
   }
   
 }
@@ -110,6 +125,40 @@ width: 60%;
 width: 70%;
   }
 } 
+
+@media (max-width: 300px) {
+  .container {
+    text-align: center;
+    width: 90%; 
+    margin-left: 5%; 
+    height: auto; 
+    padding-bottom: 20px;
+  }
+  
+  .statement h1 {
+    margin-left: 36px;
+    font-size: 1.5rem; 
+    padding-left: 20px; 
+    margin-top: 20px;
+    width: 90%; 
+  }
+
+  .container p {
+    margin-left: 20px;
+    margin-bottom: 20px; 
+    font-size: 14px; 
+    padding-right: 10px;
+  }
+
+  a.button {
+    margin-left: 20px; 
+    padding: 8px 16px; 
+    font-size: 14px; 
+    
+  }
+
+
+}
 
 
 
@@ -152,11 +201,14 @@ width: 70%;
 }
 
 #box {
+  display: flex;
+  justify-content: center;
   flex: 0 0 40%; /* 2 items per row with smaller cards */
   background-color: var(--main-color);
   border-radius: 10px;
   box-shadow: 1px 2px 6px 2px rgb(219, 219, 219);
   transition: box-shadow 0.3s;
+  
   height: 40vh;
 }
 
@@ -219,20 +271,25 @@ a {
 }
 
 /* Responsive slider design */
+
+
 @media (max-width: 1200px) {
   #containerProduct {
     height: 40vh;
+    
   }
   #box {
     flex: 0 0 33%; /* 3 items per row */
     padding-bottom: 15px;
   }
+ 
 }
 
 @media (max-width: 800px) {
   #box {
     flex: 0 0 50%; /* 2 items per row */
   }
+  
 }
 
 @media (max-width: 600px) {
