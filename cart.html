@@ -4,87 +4,87 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Uneeds</title>
-    <link rel="icon" href="imgs/logo.png" type="image/png" sizes="16x16">
+    <link rel="icon" href="imgs/logo.png" type="image/png" sizes="16x16" />
     <link
       href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="css/cart.css" />
-    
   </head>
   <body>
-   
     <div id="header"></div>
- 
+
     <script>
-     document.addEventListener("DOMContentLoaded", () => {
- fetch('finalheader.html')
-   .then(response => response.text())
-   .then(data => {
-     document.getElementById('header').innerHTML = data;
-     const menuToggle = document.querySelector('.menu-icon');
-     const navbar = document.querySelector('.navbar');
-     if (menuToggle && navbar) {
-       menuToggle.addEventListener('click', () => {
-         navbar.classList.toggle('active');
-       });
-     }
-   })
-   .catch(error => {
-     console.error('Error loading header: ', error);
-   });
-});
+      document.addEventListener("DOMContentLoaded", () => {
+        fetch("finalheader.html")
+          .then((response) => response.text())
+          .then((data) => {
+            document.getElementById("header").innerHTML = data;
+            const menuToggle = document.querySelector(".menu-icon");
+            const navbar = document.querySelector(".navbar");
+            if (menuToggle && navbar) {
+              menuToggle.addEventListener("click", () => {
+                navbar.classList.toggle("active");
+              });
+            }
+          })
+          .catch((error) => {
+            console.error("Error loading header: ", error);
+          });
+      });
     </script>
     <!----------------------------------  -->
 
-    
     <div id="cartMainContainer">
-        <h1>Checkout</h1>
-        <h3 id="totalItem">Total Items: 2</h3>
+      <h1>Checkout</h1>
+      <h3 id="totalItem">Total Items: 2</h3>
 
-        <div id="cartContainer">
-            <!-- Static Cart Items -->
-            <div id="boxContainer">
-                <div id="box">
-                    <img src="imgs/stationary/notebook.1jpeg.webp" alt="Item 1 Image">
-                    <h3>Leather Notebook</h3>
-                    <h4>Amount: <span>12$</span></h4>
-                </div>
-                <div id="box">
-                    <img src="imgs/tumblers/tum3.jpeg" alt="Item 2 Image">
-                    <h3>Stitch Tumbler</h3>
-                    <h4>Amount: <span>15$</span></h4>
-                </div>
-            </div>
-
-            <!-- Total Section -->
-            <div id="totalContainer">
-                <div id="total">
-                    <h2>Total Amount</h2>
-                    <h4>Amount: <span>27$</span></h4>
-                    <div id="button">
-                        <button>
-                            <a href="orderPlaced.html">Place Order</a>
-                        </button>
-                    </div>
-                </div>
-            </div>
+      <div id="cartContainer">
+        <!-- Static Cart Items -->
+        echo "
+        <div id="boxContainer">
+          "; echo "
+          <div id="box">
+            "; echo "<img
+              src='" . $image_url . "'
+              alt='" . $product_name . "'
+            />"; echo "
+            <h3>" . $product_name . "</h3>
+            "; echo "
+            <h4>Amount: <span> $" . $product_price . "</span></h4>
+            "; echo "
+            <p>Quantity: <span>" . $quantity . "</span></p>
+            "; // Display the quantity echo "
+          </div>
+          "; echo "
         </div>
+        ";
+
+        <!-- Total Section -->
+        <div id="totalContainer">
+          <div id="total">
+            <h2>Total Amount</h2>
+            <h4>Amount: <span>27$</span></h4>
+            <div id="button">
+              <button>
+                <a href="orderPlaced.html">Place Order</a>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
 
+    <!-- ------------Footer------------------- -->
 
+    <div id="footer"></div>
 
-        <!-- ------------Footer------------------- -->
-
-      <div id="footer"></div>
-
-      <script>
-        fetch('footer.html')
-        .then(response => response.text())
-        .then(data => document.getElementById('footer').innerHTML =data)
-        .catch(error => console.error('Error loading footer: ',error));
-      </script>
-<script src="script.js"></script>
+    <script>
+      fetch("footer.html")
+        .then((response) => response.text())
+        .then((data) => (document.getElementById("footer").innerHTML = data))
+        .catch((error) => console.error("Error loading footer: ", error));
+    </script>
+    <script src="script.js"></script>
   </body>
-
 </html>
